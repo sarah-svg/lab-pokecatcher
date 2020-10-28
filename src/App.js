@@ -1,28 +1,13 @@
 import React from 'react';
+import MyCoolHeader from './MyCoolHeader.js';
+import MyAmazingArticle from './MyAmazingArticle.js';
+import MySpecialFooter from './MySpecialFooter.js';
 
-class MyCoolHeader extends React.Component {
-  render() {
-      return (
-          <div> Hi, {this.props.name}, I am the header!</div>
-      );
-  }
-}
 
-class MyAmazingArticle extends React.Component {
-  render() {
-      return (
-          <div>I am the article!</div>
-      );
-  }
-}
 
-class MySpecialFooter extends React.Component {
-  render() {
-      return (
-          <div> I am the footer! Call us at {this.props.phone}</div>
-      );
-  }
-}
+
+
+
 
 export default class PutEmAllTogether extends React.Component {
   render() {
