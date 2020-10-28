@@ -18,7 +18,7 @@ export default class PokeyList extends Component {
     render() {
     const filteredPokemon = pokemon.filter((pokemon) => {
         if (!this.state.filter) return true;
-        if (this.state.filter === pokemon.keyword) return true;
+        if (this.state.filter === pokemon._id) return true;
         return false;
     })
     
@@ -29,8 +29,8 @@ export default class PokeyList extends Component {
 
             <>
             <select onChange={this.handleChange}>
-                <option></option>
-        {pokemon.map(pokemon => <option value={pokemon.keyword}>{pokemon.keyword}</option>)}
+                <option>See all Pokemon</option>
+        {pokemon.map(pokemon => <option value={pokemon._id}>{pokemon.id}</option>)}
             </select>
             {
             filteredPokemon.map(pokemon => 
@@ -38,6 +38,7 @@ export default class PokeyList extends Component {
                 pokemon={pokemon.pokemon}
                 src={pokemon.url_image}
                 id={pokemon.id}
+                hp={pokemon.hp}
                 />
                  )
             }
