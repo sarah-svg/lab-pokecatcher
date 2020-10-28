@@ -4,34 +4,15 @@ import pokemon from './data.js';
 
 
 export default class PokeyList extends Component {
-        state = {
-            filter: ''
-        }
-
-        handleChange = e => {
-            this.setState({
-                filter: e.target.value
-            })
-        }
-
-
     render() {
-    const filteredPokemon = pokemon.filter((pokemon) => {
-        if (!this.state.filter) return true;
-        if (this.state.filter === pokemon._id) return true;
-        return false;
-    })
-    
-    
-    
-    {
+    const filteredPokemon = this.props.pokemon.filter((pokemon) => {
+    if (!this.props.filter) return true;
+    if (this.props.filter === pokemon._id) return true;
+    return false;
+})
+        {
         return (
-
             <>
-            <select onChange={this.handleChange}>
-                <option>See all Pokemon</option>
-        {pokemon.map(pokemon => <option value={pokemon._id}>{pokemon.id}</option>)}
-            </select>
             {
             filteredPokemon.map(pokemon => 
                 <Pokey
@@ -40,15 +21,10 @@ export default class PokeyList extends Component {
                 id={pokemon.id}
                 hp={pokemon.hp}
                 />
-                 )
+            )
             }
-
             </>
-
-
-
-           
-        )
+            )
             }
     }
 }
