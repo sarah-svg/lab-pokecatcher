@@ -1,43 +1,51 @@
-import React from 'react';
-import MyCoolHeader from './MyCoolHeader.js';
-import MyAmazingArticle from './MyAmazingArticle.js';
-import MySpecialFooter from './MySpecialFooter.js';
-import PokeyList from './PokeyList.js';
-import pokemon from './data.js';
-import Drop from './Drop.js';
+import React, { Component } from 'react'
 import './App.css';
+import pokemonData from './Data.js';
+import Header from './Header.js';
+import PokeyList from './PokeyList.js';
+import SearchPokemon from './SearchPokemon.js';
 
-
-
-
-
-
-export default class PutEmAllTogether extends React.Component {
+export default class App extends Component {
   state = {
-    filter: ''
-}
+    filter: '',
+    textString: '',
+    pokey1: 'ascending',
+    pokey2: 'pokemon'
+  }
 
-handleChange = e => {
+  buttonClick = () => {
     this.setState({
-        filter: e.target.value
+      filter: this.state.textString
     })
-}
+  }
+
+  textChange = (e) => {
+    this.setState({
+      textString: e.target.value
+    })
+  }
 
 
-render() {
+  changeOne = (e) => {
+    this.setState({
+      pokey2: e.target.value
+    })
+  }
+  changeTwo = (e) => {
+    this.setState({
+      pokey1: e.target.value
+    })
+  }
 
-}
   render() {
-      return (
+    return (
+      <>
+        <Header />
         <div>
-          <h1>Pokemon !</h1>
-          <Drop handleChange={this.handleChange} />
-          <MyCoolHeader />
-          <MyAmazingArticle />
-          <PokeyList pokemon={pokemon} filter={this.state.filter} />
-    
-          <MySpecialFooter  />
+          <SearchPokemon changeOne={this.changeOne} changeTwo={this.changeTwo} buttonClick={this.buttonClick} textChange={this.textChange} />
+          <PokeyList pokey2={this.state.pokey2} pokey1={this.state.pokey1} pokemonData={pokemonData} filter={this.state.filter} />
         </div>
-      );
+      </>
+    )
   }
 }
