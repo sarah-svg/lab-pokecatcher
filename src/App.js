@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
-import pokemonData from './Data.js';
+import pokemonData from './data.js';
 import Header from './Header.js';
 import PokeyList from './PokeyList.js';
 import SearchPokemon from './SearchPokemon.js';
