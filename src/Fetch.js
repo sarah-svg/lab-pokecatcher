@@ -1,43 +1,69 @@
 import React, { Component } from 'react'
 import fetch from 'superagent';
-
+import { Link } from 'react-router-dom'
 export default class Fetch extends Component {
     state = {
-        quotes: []
+        quotes: [],
+        character: '',
+        loading: false
+    }
+    componentDidMount = async () => {
+        await this.fetchQuotes();
     }
 
-    componentDidMount = async () => {
-        const response = await fetch.get('https://alchemy-pokedex.herokuapp.com/api/pokedex');
-        this.setState({ quotes: response.body.results });
+
+
+    handleSubmit = async (e) => {
+        e.preventDefault();
     }
+
+    handleChange = async (e) => {
+        this.setState({ character: e.target.value });
+    }
+
+    fetchQuotes = async () => {
+        this.setState({ loading: true})
+        const response = await fetch.get ('https://alchemy-pokedex.herokuapp.com/api/pokedex/quotes');
+
+        this.setState({
+            quotes: response.body.result,
+            loading: false,
+        });
+    }
+    //componentDidMount = async () => {
+       // const response = await fetch.get('https://alchemy-pokedex.herokuapp.com/api/pokedex');
+       // this.setState({ quotes: response.body.results });
+    //}
+
+   
 
     render() {
         return (
-            <>
-            <div>
-            {
-                (this.state.quotes.length === 0) 
-                    ? <iframe
-                        src='https://media3.giphy.com/media/3oKIPoaRNoYOkBOZKE/giphy.gif?cid=ecf05e47w3xrxgk56hpl1vvqrpdngvxoblptfa692dxyr3y5&rid=giphy.gif'
-                        title = 'waiting'
-                        width='500%'
-                        height = '500%'
-                        frameBorder = '5'
-                        allowFullScreen/>
-                    : JSON.stringify(this.state.quotes)
-            }
+            <div className="fetch">
+            <form onSubmit={this.handleSubmit}>
+                <input onChange={this.handleChange} />
+                <button>Search by character</button>
+            </form>
+                {
+                this.state.loading
+                ? 'loading!!!'
+           
+                : this.state.quotes.map(quote => 
+               
+                    <Link to={`/quotes/${quote.character}`}>
+                        {}
+                        <div key={quote.quote} onClick={(e) => this.handleClick(quote)}>
+                            <p>{quote.character}</p>
+                            <img src={quote.image} alt={quote.character} width="100" height="100"/>
+                            <p>{quote.quote}</p>
+                        </div>
+                    </Link>)
+                }
             </div>
-            <div>
-                {this.state.quotes.map(quote => 
-                    <div>
-                        <p>
-                            {quote.character}
-                        </p>
-                    </div>
-                    )}
-           </div>
-            </> 
-            
         )
     }
 }
+
+          
+
+
