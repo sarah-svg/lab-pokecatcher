@@ -21,7 +21,6 @@ export default class Header extends Component {
                         </ul>
                     </div>
                     <div className='sixty'>
-                        <h1>Pokémon</h1>
                     </div>
                     <div className='SearchPokemon'>
                     </div>
