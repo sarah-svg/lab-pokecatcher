@@ -9,6 +9,7 @@ import Header from './Header.js';
 import ListPage from './ListPage.js';
 import Home from './Home.js';
 import Fetch from './Fetch.js';
+import DetailPage from './DetailPage.js'
 
 export default class App extends Component {
     render() {
@@ -31,6 +32,11 @@ export default class App extends Component {
                         path="/fetch" 
                         exact
                         render={(routerProps) => <Fetch {...routerProps} />} 
+                    />
+                      <Route 
+                        path="/quotes/:booger" 
+                        exact
+                        render={(routerProps) => <DetailPage {...routerProps} />} 
                     />
                     </Switch>
                 </Router>
