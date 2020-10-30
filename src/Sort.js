@@ -6,20 +6,20 @@ export default class Sort extends Component {
         return (
             <div id='SearchPokemon' className='border'>
                 <span>
-                    <label>Sort by </label>
+                    <label>Find </label>
                     <select onChange={this.props.changeTwo}>
                         <option value='pokemon'>Name</option>
                         <option value='type_1'>Primary Type</option>
                         <option value='attack'>Attack</option>
                         <option value='defense'>Defense</option>
                     </select>
-                    <label> in</label>
+                    <label>your favorite</label>
                 </span>
                 <select onChange={this.props.changeOne}>
                     <option value='ascending'>Ascending</option>
                     <option value='descending'>Descending</option>
                 </select>
-                <label>order</label>
+                <label>Pokemon or look in order</label>
             </div>
         )
     }
