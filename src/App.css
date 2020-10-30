@@ -17,8 +17,8 @@ section{
 
 header{
     background-color: rgb(29, 59, 34);
-    font-size: large;   
-     color: whitesmoke;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18
+
    
 }
 
@@ -50,6 +50,7 @@ ul, li{
     justify-content: left;
     justify-items: left;
     text-align: left;
+   
 }
 .border {
     border: 10px inset whitesmoke;

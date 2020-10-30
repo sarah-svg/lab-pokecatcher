@@ -20,14 +20,14 @@ export default class Fetch extends Component {
                     ? <iframe
                         src='https://media3.giphy.com/media/3oKIPoaRNoYOkBOZKE/giphy.gif?cid=ecf05e47w3xrxgk56hpl1vvqrpdngvxoblptfa692dxyr3y5&rid=giphy.gif'
                         title = 'waiting'
-                        width='100%'
-                        height = '100%'
-                        frameBorder = '0'
+                        width='500%'
+                        height = '500%'
+                        frameBorder = '5'
                         allowFullScreen/>
                     : JSON.stringify(this.state.quotes)
             }
             </div>
-           <div>
+            <div>
                 {this.state.quotes.map(quote => 
                     <div>
                         <p>
