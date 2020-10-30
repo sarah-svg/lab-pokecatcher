@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 
 export default class PokeItem extends Component {
+
     render() {
+        const hide = (str) => {
+            if(str === 'NA'){return 'hidden'}
+        }
         return (
-            <section className = 'column center border capital' style={{backgroundColor: this.props.pokemon.color_1}}>
+            <section className = ' border ' style={{backgroundColor: this.props.pokemon.color_1}}>
                 <h2>{this.props.pokemon.pokemon}</h2>
                 <img src = {this.props.pokemon.url_image} alt = {this.props.pokemon.pokemon} />
                 <div className = 'row'>
@@ -18,7 +22,7 @@ export default class PokeItem extends Component {
                             <li>{this.props.pokemon.type_1}</li>
                             <li className = {hide(this.props.pokemon.type_2)}>{this.props.pokemon.type_2}</li>
                         </ul>
-                        <ul> Shape:
+                        <ul className = {hide(this.props.pokemon.shape)}> Shape:
                             <li>{this.props.pokemon.shape}</li>
                         </ul>
                     </div>
@@ -27,5 +31,3 @@ export default class PokeItem extends Component {
         )
     }
 }
-
-function hide(type) {if(type === 'NA'){return 'hidden'}}
