@@ -8,6 +8,7 @@ export default class SearchPokemon extends Component {
                 <label>Search:</label>
                 <input type='text' onChange={this.props.textChange} />
                 <button onClick={this.props.buttonClick}>Go!</button>
+                
             </div>
         )
     }
