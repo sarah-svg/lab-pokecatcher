@@ -10,7 +10,7 @@ import ListPage from './ListPage.js';
 import Home from './Home.js';
 import Fetch from './Fetch.js';
 import DetailPage from './DetailPage.js'
-
+import Footer from './Footer';
 
 export default class App extends Component {
     render() {
@@ -40,7 +40,7 @@ export default class App extends Component {
                         render={(routerProps) => <DetailPage {...routerProps} />} 
                     />
                     </Switch>
-                 
+                    <Footer />
                 </Router>
             </div>
         )
