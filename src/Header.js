@@ -8,7 +8,7 @@ export default class Header extends Component {
                 <header>
                     <div className='SearchPokemon'>
                         <h1>Pokemon</h1>
-                        <p>The legendary <br />
+                        <p>Welcome to the legendary world of <br />
                 Pokémon search to find your
                 favorite one.</p>
                         <ul>

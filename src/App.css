@@ -29,8 +29,8 @@ header{
     flex-wrap: wrap
 }
 img{
-    width: 75px;
-    height: 75px;
+    width: 175px;
+    height: 175px;
     filter: saturate(130%) contrast(110%) drop-shadow(12px 10px 8px);
     transition: transform .15s;
     border: 10px outset #21348a;
@@ -48,4 +48,13 @@ img{
   }
   .black{
     background-color: black;
+
+  }
+  .border{
+    background-color: rgb(29, 80, 175);
+    
+  }
+  .lstPage{
+    background-color: rgb(29, 80, 175);
+
   }
