@@ -10,7 +10,7 @@ import ListPage from './ListPage.js';
 import Home from './Home.js';
 import Fetch from './Fetch.js';
 import DetailPage from './DetailPage.js'
-////////////////////got everything
+
 export default class App extends Component {
     render() {
         return (
