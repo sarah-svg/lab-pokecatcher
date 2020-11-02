@@ -5,6 +5,8 @@ export default class Home extends Component {
         return (
             <div className = 'center'>
                 <h2>Hey Welcome to my Pokemon Page</h2>
+                <img className='inHome' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSwhrCxx8h4cSgxmel-k31R4WK82ArOdfe-5Q&usqp=CAU'
+                 alt='pokemon friends'/>
                 <img className='imHome' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTcGMIUJCoVVpGIrpFJTXwoPglJRabk4LvAGw&usqp=CAU'
                  alt='pokemon friends'/>
                  <img className='imHome' src='https://cdn.bulbagarden.net/upload/a/a7/PSMD_poster.png'
@@ -26,7 +28,7 @@ export default class Home extends Component {
              <img className='imHome' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSc6VRGpfOU1Vtl_buqmzT4l_-xApnGVMu9Vg&usqp=CAU'
                  alt='pokemon friends'/>
 
-            
+            <p>hey</p>
             </div>
         )
     }
