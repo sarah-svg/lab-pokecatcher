@@ -11,6 +11,7 @@ import Home from './Home.js';
 import Fetch from './Fetch.js';
 import DetailPage from './DetailPage.js'
 
+
 export default class App extends Component {
     render() {
         return (
@@ -39,6 +40,7 @@ export default class App extends Component {
                         render={(routerProps) => <DetailPage {...routerProps} />} 
                     />
                     </Switch>
+                 
                 </Router>
             </div>
         )

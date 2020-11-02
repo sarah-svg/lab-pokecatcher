@@ -1,10 +1,13 @@
 .App {
     text-align: center;
     border: 20px outset #21348a;
-    background-color: black;
+    justify-content: center;
   }
 
-
+.center{
+  background-color: black;
+  border: 3px outset #21348a;
+}
 
 header{
     display: flex;
@@ -40,6 +43,9 @@ img{
     position: relative;
     transform: scale(2);
     z-index: 1;
-    color: rgb(182, 34, 34);
+    color:  #e8eb5c;
     filter: saturate(120%) contrast(120%) drop-shadow(12px 10px 8px);
+  }
+  .black{
+    background-color: black;
   }
