@@ -34,7 +34,7 @@ export default class App extends Component {
                         render={(routerProps) => <Fetch {...routerProps} />} 
                     />
                       <Route 
-                        path="/quotes/:booger" 
+                        path="/pokemon/:pokemonName" 
                         exact
                         render={(routerProps) => <DetailPage {...routerProps} />} 
                     />

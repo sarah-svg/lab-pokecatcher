@@ -5,7 +5,7 @@ export default class Header extends Component {
     render() {
         return (
             <>
-                <header className=' border '>
+                <header>
                     <div className='SearchPokemon'>
                         <h1>Pokemon</h1>
                         <p>The legendary <br />
