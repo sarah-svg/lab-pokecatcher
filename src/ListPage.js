@@ -61,7 +61,7 @@ export default class App extends Component {
     })
     await this.fetchPokemon();
   }
-  render() {
+  extrender() {
     return (
       <> 
       <div className='lstPage'>
