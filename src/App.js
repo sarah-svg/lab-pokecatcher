@@ -10,7 +10,7 @@ import ListPage from './ListPage.js';
 import Home from './Home.js';
 import Fetch from './Fetch.js';
 import DetailPage from './DetailPage.js'
-
+////////////////////got everything
 export default class App extends Component {
     render() {
         return (
@@ -34,7 +34,7 @@ export default class App extends Component {
                         render={(routerProps) => <Fetch {...routerProps} />} 
                     />
                       <Route 
-                        path="/quotes/:booger" 
+                        path="/pokemon/:pokemonName" 
                         exact
                         render={(routerProps) => <DetailPage {...routerProps} />} 
                     />

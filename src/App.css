@@ -1,105 +1,45 @@
-html{
-    height:100%;
-    width: 100%;
-    background-color:black;
+.App {
+    text-align: center;
+    border: 20px outset #21348a;
+    background-color: black;
+  }
 
-    display: flex;
-    flex-wrap: wrap;
-    
 
-}
-
-section{
-    width: 300px;
-    height: 400px;
-    margin: 10px;
-}
 
 header{
-    background-color: rgb(29, 59, 34);
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18
-
-   
-}
-
-.column{
     display: flex;
     flex-direction: column;
-}
-.row{
-    display: flex;
-    flex-direction: row;
-}
-
-img{
-    height: 100px;
-    width: 100px;
-}
-
-.center{
     align-items: center;
-    align-content: center;
     justify-content: center;
-    justify-items: center;
-    text-align: center;
-  }
+    color:black;
+    background-color: #e8eb5c;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF,
+     0 0 15px #FFF, 0 0 20px blue, 0 0 30px blue, 
+     0 0 40px #21348a, 0 0 55px #21348a, 0 0 75px #49ff18;
+     border: 20px outset #21348a;
 
-ul, li{
-    align-items: left;
-    align-content: left;
-    justify-content: left;
-    justify-items: left;
-    text-align: left;
-   
+
+
 }
-.border {
-    border: 10px inset whitesmoke;
+.box{
+    flex-direction: column;
+    flex-wrap: wrap
+}
+img{
+    width: 75px;
+    height: 75px;
+    filter: saturate(130%) contrast(110%) drop-shadow(12px 10px 8px);
+    transition: transform .15s;
+    border: 10px outset #21348a;
     margin: 20px;
+    flex-direction: column;
+
+}
+  
+  img:hover {
+    position: relative;
+    transform: scale(2);
+    z-index: 1;
+    color: rgb(182, 34, 34);
+    filter: saturate(120%) contrast(120%) drop-shadow(12px 10px 8px);
   }
-
-.capital{
-    text-transform: capitalize;
-
-}
-
-.hidden{
-    visibility: hidden;
-}
-
-.wrap{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-
-#search-bar{
-    min-width: 400px;
-    max-width: 200px;
-    height: 200px;
-    margin: 50px 50px 50px 10px;
-    padding: 3px;
-    background-color: blue;
-
-}
-
-#SearchPokemon{
-    padding: 3px;
-
-}
-
-#box{
-    padding: 3px;
-}
-
-.sixty{
-    width: 60%
-}
-
-.SearchPokemon{
-    width: 20%
-}
-
-iframe{
-    margin: 50px 0px 0px 300px;
-}

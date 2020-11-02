@@ -1,4 +1,6 @@
+
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 export default class PokeItem extends Component {
 
@@ -7,17 +9,12 @@ export default class PokeItem extends Component {
             if(str === 'NA'){return 'hidden'}
         }
         return (
-            <section className = ' border ' style={{backgroundColor: this.props.pokemon.color_1}}>
+            <div className="box">
+            <Link to={`/pokemon/${this.props.pokemon.pokemon}`}>
+            <section className = 'pokemon' style={{backgroundColor: this.props.pokemon.color_1}}>
                 <h2>{this.props.pokemon.pokemon}</h2>
                 <img src = {this.props.pokemon.url_image} alt = {this.props.pokemon.pokemon} />
-                <div className = 'row'>
-                    <ul> Stats:
-                        <li>HP: {this.props.pokemon.hp}</li>
-                        <li>Attack: {this.props.pokemon.attack}</li>
-                        <li>Defense: {this.props.pokemon.defense}</li>
-                        <li>Speed: {this.props.pokemon.speed}</li>
-                    </ul>
-                    <div className = 'column'>
+                <div className = 'pokemon'>
                         <ul> Types:
                             <li>{this.props.pokemon.type_1}</li>
                             <li className = {hide(this.props.pokemon.type_2)}>{this.props.pokemon.type_2}</li>
@@ -26,8 +23,18 @@ export default class PokeItem extends Component {
                             <li>{this.props.pokemon.shape}</li>
                         </ul>
                     </div>
+                <div className = 'pokemon'>
+                    <ul> Stats:
+                        <li>HP: {this.props.pokemon.hp}</li>
+                        <li>Attack: {this.props.pokemon.attack}</li>
+                        <li>Defense: {this.props.pokemon.defense}</li>
+                        <li>Speed: {this.props.pokemon.speed}</li>
+                    </ul>
+                    
                 </div>
             </section>
+            </Link>
+</div>
         )
     }
 }
