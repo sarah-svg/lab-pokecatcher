@@ -7,10 +7,14 @@ export default class Header extends Component {
             <>
                 <header>
                     <div className='SearchPokemon'>
+                      <div>  
+                
+                
                         <h1>Pokemon</h1>
                         <p>Welcome to the legendary world of <br />
                 Pokémon search to find your
                 favorite one.</p>
+           
                         <ul>
                             <li>
                                 <Link to="/">Home</Link>
@@ -19,6 +23,7 @@ export default class Header extends Component {
                                 <Link to="/list" >List</Link>
                             </li>
                         </ul>
+                        </div>
                     </div>
                     <div className='sixty'>
                     </div>

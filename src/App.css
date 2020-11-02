@@ -48,7 +48,8 @@ img{
   }
   .black{
     background-color: black;
-
+    color: yellow;
+    font: 3em sans-serif;
   }
   .border{
     background-color: rgb(29, 80, 175);
