@@ -28,7 +28,7 @@ export default class Home extends Component {
              <img className='imHome' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSc6VRGpfOU1Vtl_buqmzT4l_-xApnGVMu9Vg&usqp=CAU'
                  alt='pokemon friends'/>
 
-            <p>hey</p>
+           
             </div>
         )
     }
